@@ -7,7 +7,7 @@ import android.content.Context;
  * @since 6/29/2016
  */
 public class SingletonClass implements HasAge {
-    private static volatile SingletonClass instance;
+    private static SingletonClass instance;
 
     private Context context;
     private int age = 11;
