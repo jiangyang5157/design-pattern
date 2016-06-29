@@ -16,15 +16,10 @@ public class SingletonClass implements HasAge {
         this.context = context;
     }
 
-    public static SingletonClass getInstance(Context context) {
+    public static synchronized SingletonClass getInstance(Context context) {
         if (instance == null) {
-            synchronized (SingletonClass.class) {
-                if (instance == null) {
-                    instance = new SingletonClass(context);
-                }
-            }
+            instance = new SingletonClass(context);
         }
-
         return instance;
     }
 
