@@ -10,10 +10,9 @@ public enum SingletonEnum implements HasAge {
         }
     };
 
-    private SingletonEnum(String value) {
+    SingletonEnum(String value) {
         System.out.println("value");
     }
-
 
     public static SingletonEnum getInstance() {
         return SingletonEnum.INSTANCE;
